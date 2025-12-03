@@ -1,0 +1,337 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>KYC Audit Report - 20251203_235040</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background: #f5f5f5; }
+        .header { background: #2c3e50; color: white; padding: 20px; border-radius: 5px; }
+        .step { background: white; margin: 20px 0; padding: 20px; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .step-header { font-size: 18px; font-weight: bold; margin-bottom: 10px; }
+        .verified { color: #27ae60; }
+        .flagged { color: #e74c3c; }
+        .failed { color: #95a5a6; }
+        .screenshot { max-width: 400px; border: 1px solid #ddd; margin: 10px 0; }
+        .data-box { background: #ecf0f1; padding: 10px; border-radius: 3px; font-family: monospace; font-size: 12px; }
+        .timestamp { color: #7f8c8d; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🔍 KYC Verification Audit Report</h1>
+        <p>Session ID: 20251203_235040</p>
+        <p>Total Steps: 20</p>
+    </div>
+
+    <div class="step">
+        <div class="step-header">Step 1: Document Received</div>
+        <div class="timestamp">2025-12-03T23:50:40.884784</div>
+        <p>Processing document: unknown_id.png</p>
+<img src="step_001_unknown_id.png" class="screenshot" alt="Document Screenshot"><br></div>
+
+    <div class="step">
+        <div class="step-header">Step 2: LangChain Extraction</div>
+        <div class="timestamp">2025-12-03T23:50:43.173757</div>
+        <p>Successfully extracted data using LangChain agent</p>
+<img src="step_002_unknown_id.png" class="screenshot" alt="Document Screenshot"><br>
+        <strong>Extracted Data:</strong>
+        <div class="data-box">{
+  "first_name": "STRANGER",
+  "last_name": "DANGER",
+  "dob": "2000-01-01",
+  "id_number": "X99999999",
+  "document_type": "ID CARD",
+  "expiry_date": null
+}</div>
+</div>
+
+    <div class="step">
+        <div class="step-header">Step 3: LangChain Quality Review</div>
+        <div class="timestamp">2025-12-03T23:50:44.636789</div>
+        <p>Review status: APPROVED</p>
+<img src="step_003_unknown_id.png" class="screenshot" alt="Document Screenshot"><br>
+        <strong>Extracted Data:</strong>
+        <div class="data-box">{
+  "first_name": "STRANGER",
+  "last_name": "DANGER",
+  "dob": "2000-01-01",
+  "id_number": "X99999999",
+  "document_type": "ID CARD",
+  "expiry_date": null
+}</div>
+
+        <strong>Verification Result:</strong>
+        <div class="data-box ">
+            <strong>Status:</strong> N/A<br>
+</div></div>
+
+    <div class="step">
+        <div class="step-header">Step 4: Database Verification</div>
+        <div class="timestamp">2025-12-03T23:50:44.649786</div>
+        <p>Compared against internal customer database</p>
+<img src="step_004_unknown_id.png" class="screenshot" alt="Document Screenshot"><br>
+        <strong>Extracted Data:</strong>
+        <div class="data-box">{
+  "first_name": "STRANGER",
+  "last_name": "DANGER",
+  "dob": "2000-01-01",
+  "id_number": "X99999999",
+  "document_type": "ID CARD",
+  "expiry_date": null
+}</div>
+
+        <strong>Verification Result:</strong>
+        <div class="data-box flagged">
+            <strong>Status:</strong> FLAGGED<br>
+</div></div>
+
+    <div class="step">
+        <div class="step-header">Step 5: Document Received</div>
+        <div class="timestamp">2025-12-03T23:50:44.659607</div>
+        <p>Processing document: jane_license.png</p>
+<img src="step_005_jane_license.png" class="screenshot" alt="Document Screenshot"><br></div>
+
+    <div class="step">
+        <div class="step-header">Step 6: LangChain Extraction</div>
+        <div class="timestamp">2025-12-03T23:50:46.635262</div>
+        <p>Successfully extracted data using LangChain agent</p>
+<img src="step_006_jane_license.png" class="screenshot" alt="Document Screenshot"><br>
+        <strong>Extracted Data:</strong>
+        <div class="data-box">{
+  "first_name": "JANE",
+  "last_name": "SMITH",
+  "dob": "1985-05-15",
+  "id_number": "D98765432",
+  "document_type": "DRIVING_LICENSE",
+  "expiry_date": null
+}</div>
+</div>
+
+    <div class="step">
+        <div class="step-header">Step 7: LangChain Quality Review</div>
+        <div class="timestamp">2025-12-03T23:50:48.483444</div>
+        <p>Review status: APPROVED</p>
+<img src="step_007_jane_license.png" class="screenshot" alt="Document Screenshot"><br>
+        <strong>Extracted Data:</strong>
+        <div class="data-box">{
+  "first_name": "JANE",
+  "last_name": "SMITH",
+  "dob": "1985-05-15",
+  "id_number": "D98765432",
+  "document_type": "DRIVING_LICENSE",
+  "expiry_date": null
+}</div>
+
+        <strong>Verification Result:</strong>
+        <div class="data-box ">
+            <strong>Status:</strong> N/A<br>
+</div></div>
+
+    <div class="step">
+        <div class="step-header">Step 8: Database Verification</div>
+        <div class="timestamp">2025-12-03T23:50:48.494391</div>
+        <p>Compared against internal customer database</p>
+<img src="step_008_jane_license.png" class="screenshot" alt="Document Screenshot"><br>
+        <strong>Extracted Data:</strong>
+        <div class="data-box">{
+  "first_name": "JANE",
+  "last_name": "SMITH",
+  "dob": "1985-05-15",
+  "id_number": "D98765432",
+  "document_type": "DRIVING_LICENSE",
+  "expiry_date": null
+}</div>
+
+        <strong>Verification Result:</strong>
+        <div class="data-box verified">
+            <strong>Status:</strong> VERIFIED<br>
+<strong>Customer ID:</strong> CUST-002<br></div></div>
+
+    <div class="step">
+        <div class="step-header">Step 9: Document Received</div>
+        <div class="timestamp">2025-12-03T23:50:48.501544</div>
+        <p>Processing document: bob_license.png</p>
+<img src="step_009_bob_license.png" class="screenshot" alt="Document Screenshot"><br></div>
+
+    <div class="step">
+        <div class="step-header">Step 10: LangChain Extraction</div>
+        <div class="timestamp">2025-12-03T23:50:50.475781</div>
+        <p>Successfully extracted data using LangChain agent</p>
+<img src="step_010_bob_license.png" class="screenshot" alt="Document Screenshot"><br>
+        <strong>Extracted Data:</strong>
+        <div class="data-box">{
+  "first_name": "BOB",
+  "last_name": "BUILDER",
+  "dob": "1980-11-20",
+  "id_number": "L55667788",
+  "document_type": "DRIVING LICENSE",
+  "expiry_date": null
+}</div>
+</div>
+
+    <div class="step">
+        <div class="step-header">Step 11: LangChain Quality Review</div>
+        <div class="timestamp">2025-12-03T23:50:52.242869</div>
+        <p>Review status: APPROVED</p>
+<img src="step_011_bob_license.png" class="screenshot" alt="Document Screenshot"><br>
+        <strong>Extracted Data:</strong>
+        <div class="data-box">{
+  "first_name": "BOB",
+  "last_name": "BUILDER",
+  "dob": "1980-11-20",
+  "id_number": "L55667788",
+  "document_type": "DRIVING LICENSE",
+  "expiry_date": null
+}</div>
+
+        <strong>Verification Result:</strong>
+        <div class="data-box ">
+            <strong>Status:</strong> N/A<br>
+</div></div>
+
+    <div class="step">
+        <div class="step-header">Step 12: Database Verification</div>
+        <div class="timestamp">2025-12-03T23:50:52.257833</div>
+        <p>Compared against internal customer database</p>
+<img src="step_012_bob_license.png" class="screenshot" alt="Document Screenshot"><br>
+        <strong>Extracted Data:</strong>
+        <div class="data-box">{
+  "first_name": "BOB",
+  "last_name": "BUILDER",
+  "dob": "1980-11-20",
+  "id_number": "L55667788",
+  "document_type": "DRIVING LICENSE",
+  "expiry_date": null
+}</div>
+
+        <strong>Verification Result:</strong>
+        <div class="data-box flagged">
+            <strong>Status:</strong> FLAGGED<br>
+<strong>Discrepancies:</strong> DOCUMENT_TYPE mismatch: Doc='DRIVING LICENSE' vs DB='DRIVING_LICENSE'<br><strong>Customer ID:</strong> CUST-004<br></div></div>
+
+    <div class="step">
+        <div class="step-header">Step 13: Document Received</div>
+        <div class="timestamp">2025-12-03T23:50:52.268570</div>
+        <p>Processing document: dummy_passport.png</p>
+<img src="step_013_dummy_passport.png" class="screenshot" alt="Document Screenshot"><br></div>
+
+    <div class="step">
+        <div class="step-header">Step 14: LangChain Extraction</div>
+        <div class="timestamp">2025-12-03T23:50:54.311900</div>
+        <p>Successfully extracted data using LangChain agent</p>
+<img src="step_014_dummy_passport.png" class="screenshot" alt="Document Screenshot"><br>
+        <strong>Extracted Data:</strong>
+        <div class="data-box">{
+  "first_name": "JOHN",
+  "last_name": "DOE",
+  "dob": "1990-01-02",
+  "id_number": "A12345678",
+  "document_type": "PASSPORT",
+  "expiry_date": "2030-01-01"
+}</div>
+</div>
+
+    <div class="step">
+        <div class="step-header">Step 15: LangChain Quality Review</div>
+        <div class="timestamp">2025-12-03T23:50:56.178263</div>
+        <p>Review status: APPROVED</p>
+<img src="step_015_dummy_passport.png" class="screenshot" alt="Document Screenshot"><br>
+        <strong>Extracted Data:</strong>
+        <div class="data-box">{
+  "first_name": "JOHN",
+  "last_name": "DOE",
+  "dob": "1990-01-02",
+  "id_number": "A12345678",
+  "document_type": "PASSPORT",
+  "expiry_date": "2030-01-01"
+}</div>
+
+        <strong>Verification Result:</strong>
+        <div class="data-box ">
+            <strong>Status:</strong> N/A<br>
+</div></div>
+
+    <div class="step">
+        <div class="step-header">Step 16: Database Verification</div>
+        <div class="timestamp">2025-12-03T23:50:56.188848</div>
+        <p>Compared against internal customer database</p>
+<img src="step_016_dummy_passport.png" class="screenshot" alt="Document Screenshot"><br>
+        <strong>Extracted Data:</strong>
+        <div class="data-box">{
+  "first_name": "JOHN",
+  "last_name": "DOE",
+  "dob": "1990-01-02",
+  "id_number": "A12345678",
+  "document_type": "PASSPORT",
+  "expiry_date": "2030-01-01"
+}</div>
+
+        <strong>Verification Result:</strong>
+        <div class="data-box flagged">
+            <strong>Status:</strong> FLAGGED<br>
+<strong>Discrepancies:</strong> DOB mismatch: Doc='1990-01-02' vs DB='1990-01-01'<br><strong>Customer ID:</strong> CUST-001<br></div></div>
+
+    <div class="step">
+        <div class="step-header">Step 17: Document Received</div>
+        <div class="timestamp">2025-12-03T23:50:56.197578</div>
+        <p>Processing document: alice_passport.png</p>
+<img src="step_017_alice_passport.png" class="screenshot" alt="Document Screenshot"><br></div>
+
+    <div class="step">
+        <div class="step-header">Step 18: LangChain Extraction</div>
+        <div class="timestamp">2025-12-03T23:50:58.274977</div>
+        <p>Successfully extracted data using LangChain agent</p>
+<img src="step_018_alice_passport.png" class="screenshot" alt="Document Screenshot"><br>
+        <strong>Extracted Data:</strong>
+        <div class="data-box">{
+  "first_name": "ALICE",
+  "last_name": "WONDERLAND",
+  "dob": "1992-03-10",
+  "id_number": "P11223344",
+  "document_type": "PASSPORT",
+  "expiry_date": null
+}</div>
+</div>
+
+    <div class="step">
+        <div class="step-header">Step 19: LangChain Quality Review</div>
+        <div class="timestamp">2025-12-03T23:51:00.146611</div>
+        <p>Review status: APPROVED</p>
+<img src="step_019_alice_passport.png" class="screenshot" alt="Document Screenshot"><br>
+        <strong>Extracted Data:</strong>
+        <div class="data-box">{
+  "first_name": "ALICE",
+  "last_name": "WONDERLAND",
+  "dob": "1992-03-10",
+  "id_number": "P11223344",
+  "document_type": "PASSPORT",
+  "expiry_date": null
+}</div>
+
+        <strong>Verification Result:</strong>
+        <div class="data-box ">
+            <strong>Status:</strong> N/A<br>
+</div></div>
+
+    <div class="step">
+        <div class="step-header">Step 20: Database Verification</div>
+        <div class="timestamp">2025-12-03T23:51:00.160943</div>
+        <p>Compared against internal customer database</p>
+<img src="step_020_alice_passport.png" class="screenshot" alt="Document Screenshot"><br>
+        <strong>Extracted Data:</strong>
+        <div class="data-box">{
+  "first_name": "ALICE",
+  "last_name": "WONDERLAND",
+  "dob": "1992-03-10",
+  "id_number": "P11223344",
+  "document_type": "PASSPORT",
+  "expiry_date": null
+}</div>
+
+        <strong>Verification Result:</strong>
+        <div class="data-box flagged">
+            <strong>Status:</strong> FLAGGED<br>
+<strong>Discrepancies:</strong> LAST_NAME mismatch: Doc='WONDERLAND' vs DB='WONDER'<br><strong>Customer ID:</strong> CUST-003<br></div></div>
+
+</body>
+</html>

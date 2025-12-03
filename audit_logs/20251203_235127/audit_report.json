@@ -1,0 +1,456 @@
+{
+  "session_id": "20251203_235127",
+  "total_steps": 20,
+  "session_start": "2025-12-03T23:51:27.165005",
+  "session_end": "2025-12-03T23:51:51.375388",
+  "steps": [
+    {
+      "step_number": 1,
+      "timestamp": "2025-12-03T23:51:27.165005",
+      "step_name": "Document Received",
+      "details": "Processing document: unknown_id.png",
+      "document_file": "unknown_id.png",
+      "extracted_data": null,
+      "verification_result": null,
+      "screenshot": "step_001_unknown_id.png",
+      "thumbnail": "thumb_step_001_unknown_id.png"
+    },
+    {
+      "step_number": 2,
+      "timestamp": "2025-12-03T23:51:29.064164",
+      "step_name": "LangChain Extraction",
+      "details": "Successfully extracted data using LangChain agent",
+      "document_file": "unknown_id.png",
+      "extracted_data": {
+        "document_type": "ID CARD",
+        "id_number": "X99999999",
+        "full_name": "STRANGER DANGER",
+        "dob": "2000-01-01"
+      },
+      "verification_result": null,
+      "screenshot": "step_002_unknown_id.png",
+      "thumbnail": "thumb_step_002_unknown_id.png"
+    },
+    {
+      "step_number": 3,
+      "timestamp": "2025-12-03T23:51:30.728014",
+      "step_name": "LangChain Quality Review",
+      "details": "Review status: APPROVED",
+      "document_file": "unknown_id.png",
+      "extracted_data": {
+        "document_type": "ID CARD",
+        "id_number": "X99999999",
+        "full_name": "STRANGER DANGER",
+        "dob": "2000-01-01"
+      },
+      "verification_result": {
+        "review_status": "APPROVED",
+        "confidence_score": 1.0,
+        "corrections": {},
+        "issues_found": [],
+        "reviewer_notes": "All the extracted information matches the provided document."
+      },
+      "screenshot": "step_003_unknown_id.png",
+      "thumbnail": "thumb_step_003_unknown_id.png"
+    },
+    {
+      "step_number": 4,
+      "timestamp": "2025-12-03T23:51:30.740292",
+      "step_name": "Database Verification",
+      "details": "Compared against internal customer database",
+      "document_file": "unknown_id.png",
+      "extracted_data": {
+        "document_type": "ID CARD",
+        "id_number": "X99999999",
+        "full_name": "STRANGER DANGER",
+        "dob": "2000-01-01"
+      },
+      "verification_result": {
+        "status": "FLAGGED",
+        "reason": "ID X99999999 not found in internal DB"
+      },
+      "screenshot": "step_004_unknown_id.png",
+      "thumbnail": "thumb_step_004_unknown_id.png"
+    },
+    {
+      "step_number": 5,
+      "timestamp": "2025-12-03T23:51:30.749471",
+      "step_name": "Document Received",
+      "details": "Processing document: jane_license.png",
+      "document_file": "jane_license.png",
+      "extracted_data": null,
+      "verification_result": null,
+      "screenshot": "step_005_jane_license.png",
+      "thumbnail": "thumb_step_005_jane_license.png"
+    },
+    {
+      "step_number": 6,
+      "timestamp": "2025-12-03T23:51:32.392678",
+      "step_name": "LangChain Extraction",
+      "details": "Successfully extracted data using LangChain agent",
+      "document_file": "jane_license.png",
+      "extracted_data": {
+        "document_type": "DRIVING LICENSE",
+        "license_number": "D98765432",
+        "last_name": "SMITH",
+        "first_name": "JANE",
+        "dob": "1985-05-15",
+        "id_number": "D98765432"
+      },
+      "verification_result": null,
+      "screenshot": "step_006_jane_license.png",
+      "thumbnail": "thumb_step_006_jane_license.png"
+    },
+    {
+      "step_number": 7,
+      "timestamp": "2025-12-03T23:51:34.023132",
+      "step_name": "LangChain Quality Review",
+      "details": "Review status: APPROVED",
+      "document_file": "jane_license.png",
+      "extracted_data": {
+        "document_type": "DRIVING LICENSE",
+        "license_number": "D98765432",
+        "last_name": "SMITH",
+        "first_name": "JANE",
+        "dob": "1985-05-15",
+        "id_number": "D98765432"
+      },
+      "verification_result": {
+        "review_status": "APPROVED",
+        "confidence_score": 1.0,
+        "corrections": {},
+        "issues_found": [],
+        "reviewer_notes": "All the extracted information is correct and matches the document."
+      },
+      "screenshot": "step_007_jane_license.png",
+      "thumbnail": "thumb_step_007_jane_license.png"
+    },
+    {
+      "step_number": 8,
+      "timestamp": "2025-12-03T23:51:34.035966",
+      "step_name": "Database Verification",
+      "details": "Compared against internal customer database",
+      "document_file": "jane_license.png",
+      "extracted_data": {
+        "document_type": "DRIVING LICENSE",
+        "license_number": "D98765432",
+        "last_name": "SMITH",
+        "first_name": "JANE",
+        "dob": "1985-05-15",
+        "id_number": "D98765432"
+      },
+      "verification_result": {
+        "status": "FLAGGED",
+        "customer_id": "CUST-002",
+        "discrepancies": "DOCUMENT_TYPE mismatch: Doc='DRIVING LICENSE' vs DB='DRIVING_LICENSE'",
+        "extracted": {
+          "document_type": "DRIVING LICENSE",
+          "license_number": "D98765432",
+          "last_name": "SMITH",
+          "first_name": "JANE",
+          "dob": "1985-05-15",
+          "id_number": "D98765432"
+        },
+        "internal": {
+          "customer_id": "CUST-002",
+          "first_name": "JANE",
+          "last_name": "SMITH",
+          "dob": "1985-05-15",
+          "id_number": "D98765432",
+          "document_type": "DRIVING_LICENSE"
+        }
+      },
+      "screenshot": "step_008_jane_license.png",
+      "thumbnail": "thumb_step_008_jane_license.png"
+    },
+    {
+      "step_number": 9,
+      "timestamp": "2025-12-03T23:51:34.045791",
+      "step_name": "Document Received",
+      "details": "Processing document: bob_license.png",
+      "document_file": "bob_license.png",
+      "extracted_data": null,
+      "verification_result": null,
+      "screenshot": "step_009_bob_license.png",
+      "thumbnail": "thumb_step_009_bob_license.png"
+    },
+    {
+      "step_number": 10,
+      "timestamp": "2025-12-03T23:51:35.637125",
+      "step_name": "LangChain Extraction",
+      "details": "Successfully extracted data using LangChain agent",
+      "document_file": "bob_license.png",
+      "extracted_data": {
+        "document_type": "DRIVING LICENSE",
+        "license_number": "L55667788",
+        "full_name": "BOB BUILDER",
+        "dob": "1980-11-20",
+        "id_number": "L55667788"
+      },
+      "verification_result": null,
+      "screenshot": "step_010_bob_license.png",
+      "thumbnail": "thumb_step_010_bob_license.png"
+    },
+    {
+      "step_number": 11,
+      "timestamp": "2025-12-03T23:51:37.319133",
+      "step_name": "LangChain Quality Review",
+      "details": "Review status: APPROVED",
+      "document_file": "bob_license.png",
+      "extracted_data": {
+        "document_type": "DRIVING LICENSE",
+        "license_number": "L55667788",
+        "full_name": "BOB BUILDER",
+        "dob": "1980-11-20",
+        "id_number": "L55667788"
+      },
+      "verification_result": {
+        "review_status": "APPROVED",
+        "confidence_score": 1.0,
+        "corrections": {},
+        "issues_found": [],
+        "reviewer_notes": "All the extracted information is correct and matches the provided document."
+      },
+      "screenshot": "step_011_bob_license.png",
+      "thumbnail": "thumb_step_011_bob_license.png"
+    },
+    {
+      "step_number": 12,
+      "timestamp": "2025-12-03T23:51:37.333607",
+      "step_name": "Database Verification",
+      "details": "Compared against internal customer database",
+      "document_file": "bob_license.png",
+      "extracted_data": {
+        "document_type": "DRIVING LICENSE",
+        "license_number": "L55667788",
+        "full_name": "BOB BUILDER",
+        "dob": "1980-11-20",
+        "id_number": "L55667788"
+      },
+      "verification_result": {
+        "status": "FLAGGED",
+        "customer_id": "CUST-004",
+        "discrepancies": "FIRST_NAME mismatch: Doc='' vs DB='BOB'; LAST_NAME mismatch: Doc='' vs DB='BUILDER'; DOCUMENT_TYPE mismatch: Doc='DRIVING LICENSE' vs DB='DRIVING_LICENSE'",
+        "extracted": {
+          "document_type": "DRIVING LICENSE",
+          "license_number": "L55667788",
+          "full_name": "BOB BUILDER",
+          "dob": "1980-11-20",
+          "id_number": "L55667788"
+        },
+        "internal": {
+          "customer_id": "CUST-004",
+          "first_name": "BOB",
+          "last_name": "BUILDER",
+          "dob": "1980-11-20",
+          "id_number": "L55667788",
+          "document_type": "DRIVING_LICENSE"
+        }
+      },
+      "screenshot": "step_012_bob_license.png",
+      "thumbnail": "thumb_step_012_bob_license.png"
+    },
+    {
+      "step_number": 13,
+      "timestamp": "2025-12-03T23:51:37.343575",
+      "step_name": "Document Received",
+      "details": "Processing document: dummy_passport.png",
+      "document_file": "dummy_passport.png",
+      "extracted_data": null,
+      "verification_result": null,
+      "screenshot": "step_013_dummy_passport.png",
+      "thumbnail": "thumb_step_013_dummy_passport.png"
+    },
+    {
+      "step_number": 14,
+      "timestamp": "2025-12-03T23:51:45.943864",
+      "step_name": "LangChain Extraction",
+      "details": "Successfully extracted data using LangChain agent",
+      "document_file": "dummy_passport.png",
+      "extracted_data": {
+        "document_type": "PASSPORT",
+        "first_name": "JOHN",
+        "last_name": "DOE",
+        "nationality": "USA",
+        "dob": "1990-01-02",
+        "sex": "M",
+        "passport_number": "A12345678",
+        "expiry_date": "2030-01-01",
+        "photo_present": true,
+        "id_number": "A12345678"
+      },
+      "verification_result": null,
+      "screenshot": "step_014_dummy_passport.png",
+      "thumbnail": "thumb_step_014_dummy_passport.png"
+    },
+    {
+      "step_number": 15,
+      "timestamp": "2025-12-03T23:51:47.825109",
+      "step_name": "LangChain Quality Review",
+      "details": "Review status: APPROVED",
+      "document_file": "dummy_passport.png",
+      "extracted_data": {
+        "document_type": "PASSPORT",
+        "first_name": "JOHN",
+        "last_name": "DOE",
+        "nationality": "USA",
+        "dob": "1990-01-02",
+        "sex": "M",
+        "passport_number": "A12345678",
+        "expiry_date": "2030-01-01",
+        "photo_present": true,
+        "id_number": "A12345678"
+      },
+      "verification_result": {
+        "review_status": "APPROVED",
+        "confidence_score": 1.0,
+        "corrections": {},
+        "issues_found": [],
+        "reviewer_notes": "All the extracted information matches the provided document image."
+      },
+      "screenshot": "step_015_dummy_passport.png",
+      "thumbnail": "thumb_step_015_dummy_passport.png"
+    },
+    {
+      "step_number": 16,
+      "timestamp": "2025-12-03T23:51:47.839919",
+      "step_name": "Database Verification",
+      "details": "Compared against internal customer database",
+      "document_file": "dummy_passport.png",
+      "extracted_data": {
+        "document_type": "PASSPORT",
+        "first_name": "JOHN",
+        "last_name": "DOE",
+        "nationality": "USA",
+        "dob": "1990-01-02",
+        "sex": "M",
+        "passport_number": "A12345678",
+        "expiry_date": "2030-01-01",
+        "photo_present": true,
+        "id_number": "A12345678"
+      },
+      "verification_result": {
+        "status": "FLAGGED",
+        "customer_id": "CUST-001",
+        "discrepancies": "DOB mismatch: Doc='1990-01-02' vs DB='1990-01-01'",
+        "extracted": {
+          "document_type": "PASSPORT",
+          "first_name": "JOHN",
+          "last_name": "DOE",
+          "nationality": "USA",
+          "dob": "1990-01-02",
+          "sex": "M",
+          "passport_number": "A12345678",
+          "expiry_date": "2030-01-01",
+          "photo_present": true,
+          "id_number": "A12345678"
+        },
+        "internal": {
+          "customer_id": "CUST-001",
+          "first_name": "JOHN",
+          "last_name": "DOE",
+          "dob": "1990-01-01",
+          "id_number": "A12345678",
+          "document_type": "PASSPORT"
+        }
+      },
+      "screenshot": "step_016_dummy_passport.png",
+      "thumbnail": "thumb_step_016_dummy_passport.png"
+    },
+    {
+      "step_number": 17,
+      "timestamp": "2025-12-03T23:51:47.850454",
+      "step_name": "Document Received",
+      "details": "Processing document: alice_passport.png",
+      "document_file": "alice_passport.png",
+      "extracted_data": null,
+      "verification_result": null,
+      "screenshot": "step_017_alice_passport.png",
+      "thumbnail": "thumb_step_017_alice_passport.png"
+    },
+    {
+      "step_number": 18,
+      "timestamp": "2025-12-03T23:51:49.631678",
+      "step_name": "LangChain Extraction",
+      "details": "Successfully extracted data using LangChain agent",
+      "document_file": "alice_passport.png",
+      "extracted_data": {
+        "document_type": "PASSPORT",
+        "passport_number": "P11223344",
+        "last_name": "WONDERLAND",
+        "first_name": "ALICE",
+        "dob": "1992-03-10",
+        "nationality": "UK",
+        "id_number": "P11223344"
+      },
+      "verification_result": null,
+      "screenshot": "step_018_alice_passport.png",
+      "thumbnail": "thumb_step_018_alice_passport.png"
+    },
+    {
+      "step_number": 19,
+      "timestamp": "2025-12-03T23:51:51.256102",
+      "step_name": "LangChain Quality Review",
+      "details": "Review status: APPROVED",
+      "document_file": "alice_passport.png",
+      "extracted_data": {
+        "document_type": "PASSPORT",
+        "passport_number": "P11223344",
+        "last_name": "WONDERLAND",
+        "first_name": "ALICE",
+        "dob": "1992-03-10",
+        "nationality": "UK",
+        "id_number": "P11223344"
+      },
+      "verification_result": {
+        "review_status": "APPROVED",
+        "confidence_score": 1.0,
+        "corrections": {},
+        "issues_found": [],
+        "reviewer_notes": "All the extracted information matches the provided document."
+      },
+      "screenshot": "step_019_alice_passport.png",
+      "thumbnail": "thumb_step_019_alice_passport.png"
+    },
+    {
+      "step_number": 20,
+      "timestamp": "2025-12-03T23:51:51.269253",
+      "step_name": "Database Verification",
+      "details": "Compared against internal customer database",
+      "document_file": "alice_passport.png",
+      "extracted_data": {
+        "document_type": "PASSPORT",
+        "passport_number": "P11223344",
+        "last_name": "WONDERLAND",
+        "first_name": "ALICE",
+        "dob": "1992-03-10",
+        "nationality": "UK",
+        "id_number": "P11223344"
+      },
+      "verification_result": {
+        "status": "FLAGGED",
+        "customer_id": "CUST-003",
+        "discrepancies": "LAST_NAME mismatch: Doc='WONDERLAND' vs DB='WONDER'",
+        "extracted": {
+          "document_type": "PASSPORT",
+          "passport_number": "P11223344",
+          "last_name": "WONDERLAND",
+          "first_name": "ALICE",
+          "dob": "1992-03-10",
+          "nationality": "UK",
+          "id_number": "P11223344"
+        },
+        "internal": {
+          "customer_id": "CUST-003",
+          "first_name": "ALICE",
+          "last_name": "WONDER",
+          "dob": "1992-03-10",
+          "id_number": "P11223344",
+          "document_type": "PASSPORT"
+        }
+      },
+      "screenshot": "step_020_alice_passport.png",
+      "thumbnail": "thumb_step_020_alice_passport.png"
+    }
+  ]
+}

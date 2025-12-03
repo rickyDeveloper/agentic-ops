@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>KYC Audit Report - 20251203_234934</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background: #f5f5f5; }
+        .header { background: #2c3e50; color: white; padding: 20px; border-radius: 5px; }
+        .step { background: white; margin: 20px 0; padding: 20px; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .step-header { font-size: 18px; font-weight: bold; margin-bottom: 10px; }
+        .verified { color: #27ae60; }
+        .flagged { color: #e74c3c; }
+        .failed { color: #95a5a6; }
+        .screenshot { max-width: 400px; border: 1px solid #ddd; margin: 10px 0; }
+        .data-box { background: #ecf0f1; padding: 10px; border-radius: 3px; font-family: monospace; font-size: 12px; }
+        .timestamp { color: #7f8c8d; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🔍 KYC Verification Audit Report</h1>
+        <p>Session ID: 20251203_234934</p>
+        <p>Total Steps: 10</p>
+    </div>
+
+    <div class="step">
+        <div class="step-header">Step 1: Document Received</div>
+        <div class="timestamp">2025-12-03T23:49:34.886803</div>
+        <p>Processing document: unknown_id.png</p>
+<img src="step_001_unknown_id.png" class="screenshot" alt="Document Screenshot"><br></div>
+
+    <div class="step">
+        <div class="step-header">Step 2: Extraction Failed</div>
+        <div class="timestamp">2025-12-03T23:49:39.779287</div>
+        <p>LangChain agent failed to extract data</p>
+<img src="step_002_unknown_id.png" class="screenshot" alt="Document Screenshot"><br>
+        <strong>Verification Result:</strong>
+        <div class="data-box failed">
+            <strong>Status:</strong> FAILED<br>
+</div></div>
+
+    <div class="step">
+        <div class="step-header">Step 3: Document Received</div>
+        <div class="timestamp">2025-12-03T23:49:39.787884</div>
+        <p>Processing document: jane_license.png</p>
+<img src="step_003_jane_license.png" class="screenshot" alt="Document Screenshot"><br></div>
+
+    <div class="step">
+        <div class="step-header">Step 4: Extraction Failed</div>
+        <div class="timestamp">2025-12-03T23:49:43.560667</div>
+        <p>LangChain agent failed to extract data</p>
+<img src="step_004_jane_license.png" class="screenshot" alt="Document Screenshot"><br>
+        <strong>Verification Result:</strong>
+        <div class="data-box failed">
+            <strong>Status:</strong> FAILED<br>
+</div></div>
+
+    <div class="step">
+        <div class="step-header">Step 5: Document Received</div>
+        <div class="timestamp">2025-12-03T23:49:43.572594</div>
+        <p>Processing document: bob_license.png</p>
+<img src="step_005_bob_license.png" class="screenshot" alt="Document Screenshot"><br></div>
+
+    <div class="step">
+        <div class="step-header">Step 6: Extraction Failed</div>
+        <div class="timestamp">2025-12-03T23:49:47.512401</div>
+        <p>LangChain agent failed to extract data</p>
+<img src="step_006_bob_license.png" class="screenshot" alt="Document Screenshot"><br>
+        <strong>Verification Result:</strong>
+        <div class="data-box failed">
+            <strong>Status:</strong> FAILED<br>
+</div></div>
+
+    <div class="step">
+        <div class="step-header">Step 7: Document Received</div>
+        <div class="timestamp">2025-12-03T23:49:47.524981</div>
+        <p>Processing document: dummy_passport.png</p>
+<img src="step_007_dummy_passport.png" class="screenshot" alt="Document Screenshot"><br></div>
+
+    <div class="step">
+        <div class="step-header">Step 8: Extraction Failed</div>
+        <div class="timestamp">2025-12-03T23:49:52.132388</div>
+        <p>LangChain agent failed to extract data</p>
+<img src="step_008_dummy_passport.png" class="screenshot" alt="Document Screenshot"><br>
+        <strong>Verification Result:</strong>
+        <div class="data-box failed">
+            <strong>Status:</strong> FAILED<br>
+</div></div>
+
+    <div class="step">
+        <div class="step-header">Step 9: Document Received</div>
+        <div class="timestamp">2025-12-03T23:49:52.146670</div>
+        <p>Processing document: alice_passport.png</p>
+<img src="step_009_alice_passport.png" class="screenshot" alt="Document Screenshot"><br></div>
+
+    <div class="step">
+        <div class="step-header">Step 10: Extraction Failed</div>
+        <div class="timestamp">2025-12-03T23:49:55.978745</div>
+        <p>LangChain agent failed to extract data</p>
+<img src="step_010_alice_passport.png" class="screenshot" alt="Document Screenshot"><br>
+        <strong>Verification Result:</strong>
+        <div class="data-box failed">
+            <strong>Status:</strong> FAILED<br>
+</div></div>
+
+</body>
+</html>

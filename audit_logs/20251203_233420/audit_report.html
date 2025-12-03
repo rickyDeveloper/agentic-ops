@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>KYC Audit Report - 20251203_233420</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background: #f5f5f5; }
+        .header { background: #2c3e50; color: white; padding: 20px; border-radius: 5px; }
+        .step { background: white; margin: 20px 0; padding: 20px; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .step-header { font-size: 18px; font-weight: bold; margin-bottom: 10px; }
+        .verified { color: #27ae60; }
+        .flagged { color: #e74c3c; }
+        .failed { color: #95a5a6; }
+        .screenshot { max-width: 400px; border: 1px solid #ddd; margin: 10px 0; }
+        .data-box { background: #ecf0f1; padding: 10px; border-radius: 3px; font-family: monospace; font-size: 12px; }
+        .timestamp { color: #7f8c8d; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🔍 KYC Verification Audit Report</h1>
+        <p>Session ID: 20251203_233420</p>
+        <p>Total Steps: 15</p>
+    </div>
+
+    <div class="step">
+        <div class="step-header">Step 1: Document Received</div>
+        <div class="timestamp">2025-12-03T23:34:20.755328</div>
+        <p>Processing document: unknown_id.png</p>
+<img src="step_001_unknown_id.png" class="screenshot" alt="Document Screenshot"><br></div>
+
+    <div class="step">
+        <div class="step-header">Step 2: Data Extraction</div>
+        <div class="timestamp">2025-12-03T23:34:27.912015</div>
+        <p>Successfully extracted data from document using AI</p>
+<img src="step_002_unknown_id.png" class="screenshot" alt="Document Screenshot"><br>
+        <strong>Extracted Data:</strong>
+        <div class="data-box">{
+  "first_name": "STRANGER",
+  "last_name": "DANGER",
+  "dob": "2000-01-01",
+  "id_number": "X99999999",
+  "document_type": "ID_CARD",
+  "expiry_date": null
+}</div>
+</div>
+
+    <div class="step">
+        <div class="step-header">Step 3: Verification Complete</div>
+        <div class="timestamp">2025-12-03T23:34:27.923618</div>
+        <p>Compared extracted data against internal database</p>
+<img src="step_003_unknown_id.png" class="screenshot" alt="Document Screenshot"><br>
+        <strong>Extracted Data:</strong>
+        <div class="data-box">{
+  "first_name": "STRANGER",
+  "last_name": "DANGER",
+  "dob": "2000-01-01",
+  "id_number": "X99999999",
+  "document_type": "ID_CARD",
+  "expiry_date": null
+}</div>
+
+        <strong>Verification Result:</strong>
+        <div class="data-box flagged">
+            <strong>Status:</strong> FLAGGED<br>
+</div></div>
+
+    <div class="step">
+        <div class="step-header">Step 4: Document Received</div>
+        <div class="timestamp">2025-12-03T23:34:27.933186</div>
+        <p>Processing document: jane_license.png</p>
+<img src="step_004_jane_license.png" class="screenshot" alt="Document Screenshot"><br></div>
+
+    <div class="step">
+        <div class="step-header">Step 5: Data Extraction</div>
+        <div class="timestamp">2025-12-03T23:34:34.054413</div>
+        <p>Successfully extracted data from document using AI</p>
+<img src="step_005_jane_license.png" class="screenshot" alt="Document Screenshot"><br>
+        <strong>Extracted Data:</strong>
+        <div class="data-box">{
+  "first_name": "JANE",
+  "last_name": "SMITH",
+  "dob": "1985-05-15",
+  "id_number": "D98765432",
+  "document_type": "DRIVING_LICENSE",
+  "expiry_date": null
+}</div>
+</div>
+
+    <div class="step">
+        <div class="step-header">Step 6: Verification Complete</div>
+        <div class="timestamp">2025-12-03T23:34:34.069680</div>
+        <p>Compared extracted data against internal database</p>
+<img src="step_006_jane_license.png" class="screenshot" alt="Document Screenshot"><br>
+        <strong>Extracted Data:</strong>
+        <div class="data-box">{
+  "first_name": "JANE",
+  "last_name": "SMITH",
+  "dob": "1985-05-15",
+  "id_number": "D98765432",
+  "document_type": "DRIVING_LICENSE",
+  "expiry_date": null
+}</div>
+
+        <strong>Verification Result:</strong>
+        <div class="data-box verified">
+            <strong>Status:</strong> VERIFIED<br>
+<strong>Customer ID:</strong> CUST-002<br></div></div>
+
+    <div class="step">
+        <div class="step-header">Step 7: Document Received</div>
+        <div class="timestamp">2025-12-03T23:34:34.080079</div>
+        <p>Processing document: bob_license.png</p>
+<img src="step_007_bob_license.png" class="screenshot" alt="Document Screenshot"><br></div>
+
+    <div class="step">
+        <div class="step-header">Step 8: Data Extraction</div>
+        <div class="timestamp">2025-12-03T23:34:40.456911</div>
+        <p>Successfully extracted data from document using AI</p>
+<img src="step_008_bob_license.png" class="screenshot" alt="Document Screenshot"><br>
+        <strong>Extracted Data:</strong>
+        <div class="data-box">{
+  "first_name": "BOB",
+  "last_name": "BUILDER",
+  "dob": "1980-11-20",
+  "id_number": "L55667788",
+  "document_type": "DRIVING_LICENSE",
+  "expiry_date": null
+}</div>
+</div>
+
+    <div class="step">
+        <div class="step-header">Step 9: Verification Complete</div>
+        <div class="timestamp">2025-12-03T23:34:40.470505</div>
+        <p>Compared extracted data against internal database</p>
+<img src="step_009_bob_license.png" class="screenshot" alt="Document Screenshot"><br>
+        <strong>Extracted Data:</strong>
+        <div class="data-box">{
+  "first_name": "BOB",
+  "last_name": "BUILDER",
+  "dob": "1980-11-20",
+  "id_number": "L55667788",
+  "document_type": "DRIVING_LICENSE",
+  "expiry_date": null
+}</div>
+
+        <strong>Verification Result:</strong>
+        <div class="data-box verified">
+            <strong>Status:</strong> VERIFIED<br>
+<strong>Customer ID:</strong> CUST-004<br></div></div>
+
+    <div class="step">
+        <div class="step-header">Step 10: Document Received</div>
+        <div class="timestamp">2025-12-03T23:34:40.480794</div>
+        <p>Processing document: dummy_passport.png</p>
+<img src="step_010_dummy_passport.png" class="screenshot" alt="Document Screenshot"><br></div>
+
+    <div class="step">
+        <div class="step-header">Step 11: Data Extraction</div>
+        <div class="timestamp">2025-12-03T23:34:46.099583</div>
+        <p>Successfully extracted data from document using AI</p>
+<img src="step_011_dummy_passport.png" class="screenshot" alt="Document Screenshot"><br>
+        <strong>Extracted Data:</strong>
+        <div class="data-box">{
+  "first_name": "JOHN",
+  "last_name": "DOE",
+  "dob": "1990-01-02",
+  "id_number": "A12345678",
+  "document_type": "PASSPORT",
+  "expiry_date": "2030-01-01"
+}</div>
+</div>
+
+    <div class="step">
+        <div class="step-header">Step 12: Verification Complete</div>
+        <div class="timestamp">2025-12-03T23:34:46.113704</div>
+        <p>Compared extracted data against internal database</p>
+<img src="step_012_dummy_passport.png" class="screenshot" alt="Document Screenshot"><br>
+        <strong>Extracted Data:</strong>
+        <div class="data-box">{
+  "first_name": "JOHN",
+  "last_name": "DOE",
+  "dob": "1990-01-02",
+  "id_number": "A12345678",
+  "document_type": "PASSPORT",
+  "expiry_date": "2030-01-01"
+}</div>
+
+        <strong>Verification Result:</strong>
+        <div class="data-box flagged">
+            <strong>Status:</strong> FLAGGED<br>
+<strong>Discrepancies:</strong> DOB mismatch: Doc='1990-01-02' vs DB='1990-01-01'<br><strong>Customer ID:</strong> CUST-001<br></div></div>
+
+    <div class="step">
+        <div class="step-header">Step 13: Document Received</div>
+        <div class="timestamp">2025-12-03T23:34:46.124400</div>
+        <p>Processing document: alice_passport.png</p>
+<img src="step_013_alice_passport.png" class="screenshot" alt="Document Screenshot"><br></div>
+
+    <div class="step">
+        <div class="step-header">Step 14: Data Extraction</div>
+        <div class="timestamp">2025-12-03T23:34:51.972613</div>
+        <p>Successfully extracted data from document using AI</p>
+<img src="step_014_alice_passport.png" class="screenshot" alt="Document Screenshot"><br>
+        <strong>Extracted Data:</strong>
+        <div class="data-box">{
+  "first_name": "ALICE",
+  "last_name": "WONDERLAND",
+  "dob": "1992-03-10",
+  "id_number": "P11223344",
+  "document_type": "PASSPORT",
+  "expiry_date": null
+}</div>
+</div>
+
+    <div class="step">
+        <div class="step-header">Step 15: Verification Complete</div>
+        <div class="timestamp">2025-12-03T23:34:51.986651</div>
+        <p>Compared extracted data against internal database</p>
+<img src="step_015_alice_passport.png" class="screenshot" alt="Document Screenshot"><br>
+        <strong>Extracted Data:</strong>
+        <div class="data-box">{
+  "first_name": "ALICE",
+  "last_name": "WONDERLAND",
+  "dob": "1992-03-10",
+  "id_number": "P11223344",
+  "document_type": "PASSPORT",
+  "expiry_date": null
+}</div>
+
+        <strong>Verification Result:</strong>
+        <div class="data-box flagged">
+            <strong>Status:</strong> FLAGGED<br>
+<strong>Discrepancies:</strong> LAST_NAME mismatch: Doc='WONDERLAND' vs DB='WONDER'<br><strong>Customer ID:</strong> CUST-003<br></div></div>
+
+</body>
+</html>

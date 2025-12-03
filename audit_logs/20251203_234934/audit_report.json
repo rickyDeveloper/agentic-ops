@@ -1,0 +1,138 @@
+{
+  "session_id": "20251203_234934",
+  "total_steps": 10,
+  "session_start": "2025-12-03T23:49:34.886803",
+  "session_end": "2025-12-03T23:49:56.113380",
+  "steps": [
+    {
+      "step_number": 1,
+      "timestamp": "2025-12-03T23:49:34.886803",
+      "step_name": "Document Received",
+      "details": "Processing document: unknown_id.png",
+      "document_file": "unknown_id.png",
+      "extracted_data": null,
+      "verification_result": null,
+      "screenshot": "step_001_unknown_id.png",
+      "thumbnail": "thumb_step_001_unknown_id.png"
+    },
+    {
+      "step_number": 2,
+      "timestamp": "2025-12-03T23:49:39.779287",
+      "step_name": "Extraction Failed",
+      "details": "LangChain agent failed to extract data",
+      "document_file": "unknown_id.png",
+      "extracted_data": null,
+      "verification_result": {
+        "status": "FAILED",
+        "reason": "Extraction failed",
+        "file": "unknown_id.png"
+      },
+      "screenshot": "step_002_unknown_id.png",
+      "thumbnail": "thumb_step_002_unknown_id.png"
+    },
+    {
+      "step_number": 3,
+      "timestamp": "2025-12-03T23:49:39.787884",
+      "step_name": "Document Received",
+      "details": "Processing document: jane_license.png",
+      "document_file": "jane_license.png",
+      "extracted_data": null,
+      "verification_result": null,
+      "screenshot": "step_003_jane_license.png",
+      "thumbnail": "thumb_step_003_jane_license.png"
+    },
+    {
+      "step_number": 4,
+      "timestamp": "2025-12-03T23:49:43.560667",
+      "step_name": "Extraction Failed",
+      "details": "LangChain agent failed to extract data",
+      "document_file": "jane_license.png",
+      "extracted_data": null,
+      "verification_result": {
+        "status": "FAILED",
+        "reason": "Extraction failed",
+        "file": "jane_license.png"
+      },
+      "screenshot": "step_004_jane_license.png",
+      "thumbnail": "thumb_step_004_jane_license.png"
+    },
+    {
+      "step_number": 5,
+      "timestamp": "2025-12-03T23:49:43.572594",
+      "step_name": "Document Received",
+      "details": "Processing document: bob_license.png",
+      "document_file": "bob_license.png",
+      "extracted_data": null,
+      "verification_result": null,
+      "screenshot": "step_005_bob_license.png",
+      "thumbnail": "thumb_step_005_bob_license.png"
+    },
+    {
+      "step_number": 6,
+      "timestamp": "2025-12-03T23:49:47.512401",
+      "step_name": "Extraction Failed",
+      "details": "LangChain agent failed to extract data",
+      "document_file": "bob_license.png",
+      "extracted_data": null,
+      "verification_result": {
+        "status": "FAILED",
+        "reason": "Extraction failed",
+        "file": "bob_license.png"
+      },
+      "screenshot": "step_006_bob_license.png",
+      "thumbnail": "thumb_step_006_bob_license.png"
+    },
+    {
+      "step_number": 7,
+      "timestamp": "2025-12-03T23:49:47.524981",
+      "step_name": "Document Received",
+      "details": "Processing document: dummy_passport.png",
+      "document_file": "dummy_passport.png",
+      "extracted_data": null,
+      "verification_result": null,
+      "screenshot": "step_007_dummy_passport.png",
+      "thumbnail": "thumb_step_007_dummy_passport.png"
+    },
+    {
+      "step_number": 8,
+      "timestamp": "2025-12-03T23:49:52.132388",
+      "step_name": "Extraction Failed",
+      "details": "LangChain agent failed to extract data",
+      "document_file": "dummy_passport.png",
+      "extracted_data": null,
+      "verification_result": {
+        "status": "FAILED",
+        "reason": "Extraction failed",
+        "file": "dummy_passport.png"
+      },
+      "screenshot": "step_008_dummy_passport.png",
+      "thumbnail": "thumb_step_008_dummy_passport.png"
+    },
+    {
+      "step_number": 9,
+      "timestamp": "2025-12-03T23:49:52.146670",
+      "step_name": "Document Received",
+      "details": "Processing document: alice_passport.png",
+      "document_file": "alice_passport.png",
+      "extracted_data": null,
+      "verification_result": null,
+      "screenshot": "step_009_alice_passport.png",
+      "thumbnail": "thumb_step_009_alice_passport.png"
+    },
+    {
+      "step_number": 10,
+      "timestamp": "2025-12-03T23:49:55.978745",
+      "step_name": "Extraction Failed",
+      "details": "LangChain agent failed to extract data",
+      "document_file": "alice_passport.png",
+      "extracted_data": null,
+      "verification_result": {
+        "status": "FAILED",
+        "reason": "Extraction failed",
+        "file": "alice_passport.png"
+      },
+      "screenshot": "step_010_alice_passport.png",
+      "thumbnail": "thumb_step_010_alice_passport.png"
+    }
+  ]
+}

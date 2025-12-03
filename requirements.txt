@@ -1,0 +1,10 @@
+google-generativeai
+pandas
+openpyxl
+python-dotenv
+Pillow
+openai
+langchain
+langchain-google-genai
+langchain-openai
+langchain-core
