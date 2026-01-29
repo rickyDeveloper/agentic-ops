@@ -1,19 +1,23 @@
 [
     {
         "customer_id": "CUST-001",
-        "first_name": "JOHN",
-        "last_name": "DOE",
-        "dob": "1990-01-01",
-        "id_number": "A12345678",
-        "document_type": "PASSPORT"
+        "first_name": "CRAIG",
+        "last_name": "MENON",
+        "dob": "1981-01-20",
+        "id_number": "B01194",
+        "document_type": "DRIVING_LICENSE",
+        "email": "craig.menon@email.com",
+        "phone": "+61 400 111 222"
     },
     {
         "customer_id": "CUST-002",
         "first_name": "JANE",
         "last_name": "SMITH",
-        "dob": "1985-05-15",
-        "id_number": "D98765432",
-        "document_type": "DRIVING_LICENSE"
+        "dob": "1990-06-15",
+        "id_number": "RA0123456",
+        "document_type": "PASSPORT",
+        "email": "jane.smith@email.com",
+        "phone": "+61 400 333 444"
     },
     {
         "customer_id": "CUST-003",

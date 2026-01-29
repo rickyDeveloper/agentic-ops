@@ -100,7 +100,17 @@ ipython_config.py
 #   commonly ignored for libraries.
 #uv.lock
 
-.env.example
+# Node.js
+node_modules/
+frontend/node_modules/
+frontend/dist/
+*.tsbuildinfo
+
+# Database
+*.db
+
+# Uploaded files (keep structure, ignore content)
+audit_logs/*/
 
 # poetry
 #   Similar to Pipfile.lock, it is generally recommended to include poetry.lock in version control.
@@ -207,3 +217,5 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+*.sqlite
+backend/audit_logs/
