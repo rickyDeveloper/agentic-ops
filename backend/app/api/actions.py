@@ -5,7 +5,7 @@ from datetime import datetime
 from fastapi import APIRouter, Depends, HTTPException, BackgroundTasks
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
-from app.database import get_db
+from app.database import AsyncSessionLocal, get_db
 from app.models.case import ACIPCase, CaseStatus
 from app.models.action import CaseAction, ActionType
 from app.schemas.case import ActionCreate, ActionResponse, CaseResponse
@@ -20,14 +20,34 @@ router = APIRouter(prefix="/api/cases/{case_id}/actions", tags=["actions"])
 
 async def resume_workflow_task(case_id: str, decision: str, actor: str, notes: str):
     """Background task to resume the workflow after human input."""
+    thread_id = None
+    async with AsyncSessionLocal() as db:
+        stmt = select(ACIPCase).where(ACIPCase.id == case_id)
+        result = await db.execute(stmt)
+        case = result.scalar_one_or_none()
+        if case:
+            thread_id = case.langgraph_thread_id
+
+    if not thread_id:
+        await manager.broadcast({
+            "type": "case_update",
+            "case_id": case_id,
+            "status": "error",
+            "decision": decision,
+            "actor": actor,
+            "timestamp": datetime.utcnow().isoformat(),
+            "error": "Missing workflow thread_id"
+        })
+        return
+
     workflow = ACIPWorkflow()
     result = workflow.resume_with_human_input(
-        case_id=case_id,
+        thread_id=thread_id,
         decision=decision,
         actor=actor,
         notes=notes
     )
-    
+
     # Broadcast update
     await manager.broadcast({
         "type": "case_update",

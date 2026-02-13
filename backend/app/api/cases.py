@@ -210,6 +210,9 @@ async def process_case_workflow(
                     "escalated": CaseStatus.ESCALATED
                 }
                 case.status = status_map.get(workflow_status, CaseStatus.AWAITING_HUMAN)
+                workflow_thread_id = result.get("thread_id")
+                if workflow_thread_id:
+                    case.langgraph_thread_id = workflow_thread_id
                 
                 await db.commit()
                 await db.refresh(case)
